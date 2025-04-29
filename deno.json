@@ -1,0 +1,23 @@
+{
+	"name": "@lucasliet/textcompress",
+	"version": "2.0.0",
+	"license": "MIT",
+	"exports": "./mod.ts",
+	"tasks": {
+		"test": "deno test test.ts"
+	},
+	"fmt": {
+		"useTabs": true,
+		"semiColons": true,
+		"singleQuote": true,
+		"lineWidth": 160
+	},
+	"imports": {
+		"base64": "jsr:@std/encoding@1.0.10",
+		"lz4": "jsr:@nick/lz4@0.1.0",
+		"expect": "jsr:@std/expect@1.0.15"
+	},
+	"compilerOptions": {
+		"strict": true
+	}
+}
