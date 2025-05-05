@@ -25,7 +25,7 @@ This function decompresses a text string that was previously compressed and enco
 ```typescript
 import { decompressText } from 'jsr:@lucasliet/textcompress';
 
-const compressedText = '0EhlbGxvLCB3b3JsZCE=';
+const compressedText = 'DQAAANBIZWxsbywgd29ybGQh';
 const decompressedText = decompressText(compressedText);
 
 console.log(decompressedText);
@@ -51,7 +51,7 @@ This function decompresses a string that was previously compressed and encoded i
 ```typescript
 import { decompressObject } from 'jsr:@lucasliet/textcompress';
 
-const compressedObj = '8AB7Im9sYSI6Im11bmRvIn0='; // Insert a lz4 compressed and base64-encoded string here.
+const compressedObj = 'DwAAAPAAeyJvbGEiOiJtdW5kbyJ9'; // Insert a lz4 compressed and base64-encoded string here.
 const decompressedObj = decompressObject(compressedObj);
 
 console.log(decompressedObj);
