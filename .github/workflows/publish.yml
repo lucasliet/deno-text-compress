@@ -1,11 +1,13 @@
-name: Publish
+name: Release CI
 on:
+  pull_request:
+    branches: [main]
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   publish:
+    name: Check code and release package
     runs-on: ubuntu-latest
 
     permissions:
@@ -57,5 +59,17 @@ jobs:
       - name: Clean coverage report before publish
         run: rm -rf coverage*
 
+      - name: Check if deno.json version was increased
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin main:main
+          PREVIOUS_VERSION=$(jq -r '.version' deno.json)
+          PREVIOUS_VERSION_MAIN=$(git show main:deno.json | jq -r '.version')
+          if [ "$PREVIOUS_VERSION" == "$PREVIOUS_VERSION_MAIN" ]; then
+            echo "Version was not increased. Failing the workflow."
+            exit 1
+          fi
+
       - name: Publish package to JSR (Deno is published by tags webhook)
+        if: github.event_name == 'push'
         run: deno publish
