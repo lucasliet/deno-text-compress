@@ -4,11 +4,11 @@ import { expect } from 'expect';
 Deno.test('it should compress text', () => {
 	const compressedText = compressText('Hello, world!');
 
-	expect(compressedText).toBe('0EhlbGxvLCB3b3JsZCE=');
+	expect(compressedText).toBe('DQAAANBIZWxsbywgd29ybGQh');
 });
 
 Deno.test('it should decompress text', () => {
-	const decompressedText = decompressText('0EhlbGxvLCB3b3JsZCE=');
+	const decompressedText = decompressText('DQAAANBIZWxsbywgd29ybGQh');
 
 	expect(decompressedText).toBe('Hello, world!');
 });
@@ -16,11 +16,11 @@ Deno.test('it should decompress text', () => {
 Deno.test('it should compress Object', () => {
 	const compressedObject = compressObject({ ola: 'mundo' });
 
-	expect(compressedObject).toBe('8AB7Im9sYSI6Im11bmRvIn0=');
+	expect(compressedObject).toBe('DwAAAPAAeyJvbGEiOiJtdW5kbyJ9');
 });
 
 Deno.test('it should decompress Object', () => {
-	const decompressedObject: { ola: string } = decompressObject('8AB7Im9sYSI6Im11bmRvIn0=');
+	const decompressedObject: { ola: string } = decompressObject('DwAAAPAAeyJvbGEiOiJtdW5kbyJ9');
 
 	expect(decompressedObject).toEqual({ ola: 'mundo' });
 	expect(decompressedObject).toHaveProperty('ola');

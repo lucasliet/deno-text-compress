@@ -1,15 +1,15 @@
 {
-  "version": "4",
+  "version": "5",
   "specifiers": {
-    "jsr:@nick/lz4@0.1.0": "0.1.0",
+    "jsr:@nick/lz4@0.3.2": "0.3.2",
     "jsr:@std/assert@^1.0.12": "1.0.12",
     "jsr:@std/encoding@1.0.10": "1.0.10",
     "jsr:@std/expect@1.0.15": "1.0.15",
     "jsr:@std/internal@^1.0.6": "1.0.6"
   },
   "jsr": {
-    "@nick/lz4@0.1.0": {
-      "integrity": "a91557f433d24bac4edc72aba320e23a0784236fbf692a0594e3901c1c491ac4"
+    "@nick/lz4@0.3.2": {
+      "integrity": "62dc9ce344cfc7984136b6101e3eb3645ad3c7c062939d7d09a39272766e2855"
     },
     "@std/assert@1.0.12": {
       "integrity": "08009f0926dda9cbd8bef3a35d3b6a4b964b0ab5c3e140a4e0351fbf34af5b9a",
@@ -42,7 +42,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@nick/lz4@0.1.0",
+      "jsr:@nick/lz4@0.3.2",
       "jsr:@std/encoding@1.0.10",
       "jsr:@std/expect@1.0.15"
     ]
