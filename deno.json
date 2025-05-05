@@ -14,7 +14,7 @@
 	},
 	"imports": {
 		"base64": "jsr:@std/encoding@1.0.10",
-		"lz4": "jsr:@nick/lz4@0.1.0",
+		"lz4": "jsr:@nick/lz4@0.3.2",
 		"expect": "jsr:@std/expect@1.0.15"
 	},
 	"compilerOptions": {
