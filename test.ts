@@ -1,5 +1,5 @@
 import { compressObject, compressText, decompressObject, decompressText } from './mod.ts';
-import { expect } from 'expect';
+import { expect } from 'jsr:@std/expect@1.0.15';
 
 Deno.test('it should compress text', () => {
 	const compressedText = compressText('Hello, world!');

@@ -1,5 +1,5 @@
-import { decodeBase64, encodeBase64 } from 'base64';
-import { compress, decompress } from 'lz4';
+import { decodeBase64, encodeBase64 } from 'jsr:@std/encoding@1.0.10';
+import { compress, decompress } from 'jsr:@nick/lz4@0.3.2';
 
 /**
  * Compresses a text string using the lz4 compression algorithm and encodes it as base64.

@@ -2,33 +2,14 @@
   "version": "5",
   "specifiers": {
     "jsr:@nick/lz4@0.3.2": "0.3.2",
-    "jsr:@std/assert@^1.0.12": "1.0.12",
-    "jsr:@std/encoding@1.0.10": "1.0.10",
-    "jsr:@std/expect@1.0.15": "1.0.15",
-    "jsr:@std/internal@^1.0.6": "1.0.6"
+    "jsr:@std/encoding@1.0.10": "1.0.10"
   },
   "jsr": {
     "@nick/lz4@0.3.2": {
       "integrity": "62dc9ce344cfc7984136b6101e3eb3645ad3c7c062939d7d09a39272766e2855"
     },
-    "@std/assert@1.0.12": {
-      "integrity": "08009f0926dda9cbd8bef3a35d3b6a4b964b0ab5c3e140a4e0351fbf34af5b9a",
-      "dependencies": [
-        "jsr:@std/internal"
-      ]
-    },
     "@std/encoding@1.0.10": {
       "integrity": "8783c6384a2d13abd5e9e87a7ae0520a30e9f56aeeaa3bdf910a3eaaf5c811a1"
-    },
-    "@std/expect@1.0.15": {
-      "integrity": "eca360007b5a7f13dbfa1294224baee7fb98dcd460d8461fe64eeae302902945",
-      "dependencies": [
-        "jsr:@std/assert",
-        "jsr:@std/internal"
-      ]
-    },
-    "@std/internal@1.0.6": {
-      "integrity": "9533b128f230f73bd209408bb07a4b12f8d4255ab2a4d22a1fd6d87304aca9a4"
     }
   },
   "remote": {
@@ -39,12 +20,5 @@
     "https://deno.land/x/lz4@0.1.7/wasm.js": "77771b89e89ec7ff6e3e0939a7fb4f9b166abec3504cec0532ad5c127d6f35d2",
     "https://deno.land/x/lz4@v0.1.2/mod.ts": "4decfc1a3569d03fd1813bd39128b71c8f082850fe98ecfdde20025772916582",
     "https://deno.land/x/lz4@v0.1.2/wasm.js": "b9c65605327ba273f0c76a6dc596ec534d4cda0f0225d7a94ebc606782319e46"
-  },
-  "workspace": {
-    "dependencies": [
-      "jsr:@nick/lz4@0.3.2",
-      "jsr:@std/encoding@1.0.10",
-      "jsr:@std/expect@1.0.15"
-    ]
   }
 }
