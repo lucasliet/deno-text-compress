@@ -72,4 +72,4 @@ jobs:
 
       - name: Publish package to JSR (Deno is published by tags webhook)
         if: github.event_name == 'push'
-        run: deno publish
+        run: deno publish --allow-dirty
